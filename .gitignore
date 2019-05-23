@@ -1,0 +1,7 @@
+*.o
+*.out
+*.swp
+*.swo
+*.pyc
+*.root
+*.pdf
