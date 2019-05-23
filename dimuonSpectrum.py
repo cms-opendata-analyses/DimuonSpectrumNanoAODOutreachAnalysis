@@ -4,7 +4,7 @@ import ROOT
 ROOT.ROOT.EnableImplicitMT()
 
 # Create dataframe from NanoAOD files
-df = ROOT.ROOT.RDataFrame("Events", "Run2012BC_DoubleMuParked.root")
+df = ROOT.RDataFrame("Events", "Run2012BC_DoubleMuParked.root")
 
 # Select events with exactly two muons
 df_2mu = df.Filter("nMuon == 2", "Events with exactly two muons")
@@ -13,6 +13,9 @@ df_2mu = df.Filter("nMuon == 2", "Events with exactly two muons")
 df_os = df_2mu.Filter("Muon_charge[0] != Muon_charge[1]", "Muons with opposite charge")
 
 # Compute invariant mass of the dimuon system
+# The following code just-in-time compiles the C++ function to compute
+# the invariant mass, so that the function can be called in the Define node of
+# the ROOT dataframe.
 ROOT.gInterpreter.Declare(
 """
 using namespace ROOT::VecOps;
@@ -28,7 +31,7 @@ df_mass = df_os.Define("Dimuon_mass", "computeInvariantMass(Muon_pt, Muon_eta, M
 bins = 30000 # Number of bins in the histogram
 low = 0.25 # Lower edge of the histogram
 up = 300.0 # Upper edge of the histogram
-hist = df_mass.Histo1D(ROOT.ROOT.RDF.TH1DModel("", "", bins, low, up), "Dimuon_mass")
+hist = df_mass.Histo1D(ROOT.RDF.TH1DModel("", "", bins, low, up), "Dimuon_mass")
 
 # Request cut-flow report
 report = df_mass.Report()
@@ -45,7 +48,7 @@ hist.GetXaxis().SetTitle("m_{#mu#mu} (GeV)")
 hist.GetXaxis().SetTitleSize(0.04)
 hist.GetYaxis().SetTitle("N_{Events}")
 hist.GetYaxis().SetTitleSize(0.04)
-hist.DrawClone()
+hist.Draw()
 
 # Draw labels
 label = ROOT.TLatex()
