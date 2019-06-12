@@ -12,6 +12,12 @@ The analysis needs solely a ROOT installation (6.16 or greater). You can get the
 source /cvmfs/sft.cern.ch/lcg/views/LCG_95/x86_64-slc6-gcc8-opt/setup.sh
 ```
 
+To download the files, you can either use `git` with the following command or download them directly via the web browser.
+
+```bash
+git clone git://github.com/cms-opendata-analyses/DimuonSpectrumNanoAODOutreachAnalysis -b master
+```
+
 The analysis code itself is provided in Python and C++. The instructions to run the scripts is shown below:
 
 **Python (interactive):**
