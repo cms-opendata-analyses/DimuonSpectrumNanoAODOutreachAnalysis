@@ -5,3 +5,4 @@
 *.pyc
 *.root
 *.pdf
+.ipynb*
