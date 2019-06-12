@@ -20,6 +20,18 @@ git clone git://github.com/cms-opendata-analyses/DimuonSpectrumNanoAODOutreachAn
 
 The analysis code itself is provided in Python and C++. The instructions to run the scripts is shown below:
 
+**Python (notebook):**
+
+The notebook can either be run locally or via [binder](https://mybinder.org/) in the browser. To run locally, use the following command.
+
+```bash
+jupyter notebook
+```
+
+To run via binder, you just have to click the following link and follow the instructions.
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/stwunsch/DimuonSpectrumNanoAODOutreachAnalysis/master)
+
 **Python (interactive):**
 
 Note the `-i` flag, which keeps the Python interpreter alive after the end of the script so that the interactive plot can still be explored.

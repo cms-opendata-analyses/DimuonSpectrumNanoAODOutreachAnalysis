@@ -1,0 +1,5 @@
+name: analysis
+channels:
+  - conda-forge
+dependencies:
+  - root=6.16.00
