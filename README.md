@@ -1,6 +1,6 @@
-# DimuonSpectrum2012NanoAOD
+# Analysis of the di-muon spectrum using data from the CMS detector
 
-Analysis using reduced NanoAOD files created from 2012 CMS open data producing a high statistics di-muon spectrum
+Analysis using reduced NanoAOD files created from CMS open data producing a high statistics di-muon spectrum
 
 ![](dimuonSpectrum.png)
 
