@@ -30,7 +30,7 @@ jupyter notebook
 
 To run via binder, you just have to click the following link and follow the instructions.
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/stwunsch/DimuonSpectrumNanoAODOutreachAnalysis/2012)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/cms-opendata-analyses/DimuonSpectrumNanoAODOutreachAnalysis/2012)
 
 **Python (interactive):**
 
