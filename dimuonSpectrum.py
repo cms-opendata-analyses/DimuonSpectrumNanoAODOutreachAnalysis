@@ -4,7 +4,7 @@ import ROOT
 ROOT.ROOT.EnableImplicitMT()
 
 # Create dataframe from NanoAOD files
-df = ROOT.RDataFrame("Events", "root://eospublic.cern.ch//eos/opendata/cms/derived-data/AOD2NanoAODOutreachTool/Run2012BC_DoubleMuParked.root")
+df = ROOT.RDataFrame("Events", "root://eospublic.cern.ch//eos/opendata/cms/derived-data/AOD2NanoAODOutreachTool/Run2012BC_DoubleMuParked_Muons.root")
 
 # Select events with exactly two muons
 df_2mu = df.Filter("nMuon == 2", "Events with exactly two muons")

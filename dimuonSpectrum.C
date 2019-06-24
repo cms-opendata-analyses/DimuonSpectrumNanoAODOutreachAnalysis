@@ -23,7 +23,7 @@ void dimuonSpectrum() {
     ROOT::EnableImplicitMT();
 
     // Create dataframe from NanoAOD files
-    ROOT::RDataFrame df("Events", "root://eospublic.cern.ch//eos/opendata/cms/derived-data/AOD2NanoAODOutreachTool/Run2012BC_DoubleMuParked.root");
+    ROOT::RDataFrame df("Events", "root://eospublic.cern.ch//eos/opendata/cms/derived-data/AOD2NanoAODOutreachTool/Run2012BC_DoubleMuParked_Muons.root");
 
     // Select events with exactly two muons
     auto df_2mu = df.Filter("nMuon == 2", "Events with exactly two muons");
