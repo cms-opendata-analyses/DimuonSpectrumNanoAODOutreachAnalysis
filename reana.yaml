@@ -1,0 +1,19 @@
+version: 0.6.0
+inputs:
+  files:
+    - dimuonSpectrum.C
+workflow:
+  type: serial
+  specification:
+    steps:
+      - name: compile
+        environment: reanahub/reana-env-root6:6.18.04
+        commands:
+          - g++ -v -O3 -o dimuonSpectrum dimuonSpectrum.C `root-config --cflags --libs`
+      - name: run
+        environment: reanahub/reana-env-root6:6.18.04
+        commands:
+          - ./dimuonSpectrum
+outputs:
+  files:
+    - dimuonSpectrum.pdf
