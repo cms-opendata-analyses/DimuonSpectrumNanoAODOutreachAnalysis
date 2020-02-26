@@ -20,7 +20,8 @@ float computeInvariantMass(RVec<float>& pt, RVec<float>& eta, RVec<float>& phi, 
 
 void dimuonSpectrum() {
     // Enable multi-threading
-    ROOT::EnableImplicitMT();
+    // The default here is set to a single thread. You can choose the number of threads based on your system.
+    ROOT::EnableImplicitMT(1);
 
     // Create dataframe from NanoAOD files
     ROOT::RDataFrame df("Events", "root://eospublic.cern.ch//eos/opendata/cms/derived-data/AOD2NanoAODOutreachTool/Run2012BC_DoubleMuParked_Muons.root");

@@ -1,7 +1,8 @@
 import ROOT
 
 # Enable multi-threading
-ROOT.ROOT.EnableImplicitMT()
+# The default here is set to a single thread. You can choose the number of threads based on your system.
+ROOT.ROOT.EnableImplicitMT(1)
 
 # Create dataframe from NanoAOD files
 df = ROOT.RDataFrame("Events", "root://eospublic.cern.ch//eos/opendata/cms/derived-data/AOD2NanoAODOutreachTool/Run2012BC_DoubleMuParked_Muons.root")
