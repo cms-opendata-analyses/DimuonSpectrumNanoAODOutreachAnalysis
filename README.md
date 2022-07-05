@@ -15,7 +15,7 @@ source /cvmfs/sft.cern.ch/lcg/views/LCG_95/x86_64-slc6-gcc8-opt/setup.sh
 To download the files, you can either use `git` with the following command or download them directly via the web browser.
 
 ```bash
-git clone git://github.com/cms-opendata-analyses/DimuonSpectrumNanoAODOutreachAnalysis -b v1.3
+git clone git://github.com/cms-opendata-analyses/DimuonSpectrumNanoAODOutreachAnalysis -b v1.4
 ```
 
 The analysis code itself is provided in Python and C++. The instructions to run the scripts is shown below:
@@ -28,9 +28,9 @@ The notebook can either be run locally or via [binder](https://mybinder.org/) in
 jupyter notebook
 ```
 
-To run via binder, you just have to click the following link and follow the instructions.
+To run via binder, you just have to click the following link and follow the instructions. You can ignore the two error messages.
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/cms-opendata-analyses/DimuonSpectrumNanoAODOutreachAnalysis/v1.3)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/cms-opendata-analyses/DimuonSpectrumNanoAODOutreachAnalysis/v1.4)
 
 **Python (interactive):**
 
