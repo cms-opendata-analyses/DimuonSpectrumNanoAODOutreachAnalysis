@@ -2,4 +2,4 @@ name: analysis
 channels:
   - conda-forge
 dependencies:
-  - root=6.16.00
+  - root=6.28.00
