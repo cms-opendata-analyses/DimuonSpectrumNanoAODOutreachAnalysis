@@ -5,8 +5,7 @@ Analysis using reduced NanoAOD files created from CMS open data producing a high
 ![](dimuonSpectrum.png)
 
 ## How to run this?
-
-The analysis needs solely a ROOT installation (6.16 or greater). You can get the software easily using the CMS Open Data VM and CVMFS. Just run the following command in the terminal to source an appropriate software stack:
+The analysis needs solely a ROOT installation. You can get the software easily using the CMS Open Data VM and CVMFS. Note that version 6.28.00 is used in the environment.yml and reana.yaml files but it may be different when set up through CVMFS. Just run the following command in the terminal to source an appropriate software stack:
 
 ```bash
 source /cvmfs/sft.cern.ch/lcg/views/LCG_95/x86_64-slc6-gcc8-opt/setup.sh
@@ -15,7 +14,8 @@ source /cvmfs/sft.cern.ch/lcg/views/LCG_95/x86_64-slc6-gcc8-opt/setup.sh
 To download the files, you can either use `git` with the following command or download them directly via the web browser.
 
 ```bash
-git clone git://github.com/cms-opendata-analyses/DimuonSpectrumNanoAODOutreachAnalysis -b v1.4
+git clone https://github.com/cms-opendata-analyses/DimuonSpectrumNanoAODOutreachAnalysis.git -b v1.5
+cd DimuonSpectrumNanoAODOutreachAnalysis
 ```
 
 The analysis code itself is provided in Python and C++. The instructions to run the scripts is shown below:
@@ -30,7 +30,7 @@ jupyter notebook
 
 To run via binder, you just have to click the following link and follow the instructions. You can ignore the two error messages.
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/cms-opendata-analyses/DimuonSpectrumNanoAODOutreachAnalysis/v1.4)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/cms-opendata-analyses/DimuonSpectrumNanoAODOutreachAnalysis/HEAD?labpath=dimuonSpectrum.ipynb)
 
 **Python (interactive):**
 

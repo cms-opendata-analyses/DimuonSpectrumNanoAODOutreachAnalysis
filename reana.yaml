@@ -7,11 +7,11 @@ workflow:
   specification:
     steps:
       - name: compile
-        environment: reanahub/reana-env-root6:6.18.04
+        environment: rootproject/root:6.28.00-ubuntu22.04
         commands:
           - g++ -v -O3 -o dimuonSpectrum dimuonSpectrum.C `root-config --cflags --libs`
       - name: run
-        environment: reanahub/reana-env-root6:6.18.04
+        environment: rootproject/root:6.28.00-ubuntu22.04
         commands:
           - ./dimuonSpectrum
 outputs:
